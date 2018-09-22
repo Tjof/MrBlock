@@ -11,11 +11,17 @@ namespace normlab1
         public static bool IsLeapYear(int year)
         {
             if (year % 4 == 0)
-            //какие-то расчеты
-            { return true;
+            {
+                if (year % 400 != 0 && year % 100 == 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
             }
-            else { return false;
-            }
+            return false;
         }
     }
 
